@@ -1,3 +1,5 @@
+print("Triggered by Job F polling!")
+
 print("Triggered by Poll SCM!")
 
 print("Hello world")
