@@ -1,36 +1,17 @@
 pipeline {
-    agent { 
-        node {
-            label 'docker-agent-alpine'
-            }
-      }
-    triggers {
-        pollSCM '*/5 * * * *'
-    }
+    agent any
     stages {
-        stage('Build') {
+        stage('Identity') {
             steps {
-                echo "Building.."
-                sh '''
-                echo "Building from Jenkins file"
-                '''
+                echo 'Name: deekshitha karvan'
+                echo 'Roll No: se22ucse129'
             }
         }
-        stage('Test') {
+        stage('Run Python Script') {
             steps {
-                echo "Testing.."
-                sh '''
-                echo "Testing the build triggered from Jenkins file."
-                '''
-            }
-        }
-        stage('Deliver') {
-            steps {
-                echo 'Deliver....'
-                sh '''
-                echo "doing delivery stuff.."
-                '''
+                sh 'python3 helloworld.py'
             }
         }
     }
 }
+
