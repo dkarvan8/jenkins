@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Run Python Script') {
             steps {
-                sh 'python3 helloworld.py'
+                echo 'Hello from SCM-triggered pipeline!'
             }
         }
     }
